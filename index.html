@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- write comments here -->
+<html>
+	<head>
+		<title>Calculator: Sum</title>
+		<style type="text/css">
+			div{
+			  padding: 8px 16px;
+			  border: 2px solid gray;
+			  font-size: 1.5em;
+			  margin: 16px 0;
+			  display: inline-block;
+			  background-color: orange;
+			  font-weight: bold;
+			}
+			button{
+			padding: 8px 16px;
+			border: 1px solid green;
+			background-color: green;
+			font-weight: bold;
+			margin-left: 90px;
+			border-radius: 10px;
+			color: white;
+			}
+			
+			input{
+				margin-right: 0px;
+				margin-left: 16px;
+				margin-top: 16px;
+				border: 1px solid #333;
+				width: 200px;
+				padding: 8px;
+			}
+			
+			input#firstNumber{
+				margin-left: 34px;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+	
+		<span>Enter first  number: </span><input id="firstNumber" type="number" placeholder="Enter a number" /> <br />
+		<span>Enter second  number: </span><input id="secondNumber" type="number" placeholder="Enter a number" /> <br />
+		<div id="output">Output will be shown here</div><br />
+		<button onclick="calc()">Calculate</button>
+	<script>
+			function add(firstNumber, secondNumber){ // 8, 9
+				return firstNumber + secondNumber; // 8 + 9 = 17  // 8 + 9 => 89
+			}
+			
+			function calc(){
+			
+				var firstNumber = parseFloat(document.getElementById("firstNumber").value);
+				var secondNumber = parseFloat(document.getElementById("secondNumber").value);
+				var result = add(firstNumber, secondNumber); 
+				
+				var output = document.getElementById("output");
+				output.innerText = output.innerText + "The sum of " + firstNumber + " and " + secondNumber + " is " + result;
+				
+			}
+		
+		</script>
+	</body>
+</html>
+
